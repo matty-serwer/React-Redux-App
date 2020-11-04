@@ -1,17 +1,29 @@
+// libraries
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore, applyMiddleware } from "redux";
+import { Provider } from "react-redux";
+import thunk from "redux-thunk";
+
+// stylesheets
 import './index.css';
+
+// redux (helpers)
+
+// components
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+function reducer() {
+  return {
+    test: 'test reducer'
+  }
+}
+
+const store = createStore(reducer, applyMiddleware(thunk));
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
