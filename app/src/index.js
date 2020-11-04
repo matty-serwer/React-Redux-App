@@ -9,17 +9,18 @@ import thunk from "redux-thunk";
 import './index.css';
 
 // redux (helpers)
+import { quoteReducer } from "./store/reducers";
 
 // components
 import App from './App';
 
-function reducer() {
-  return {
-    test: 'test reducer'
-  }
-}
+// function reducer() {
+//   return {
+//     test: 'test reducer'
+//   }
+// }
 
-const store = createStore(reducer, applyMiddleware(thunk));
+const store = createStore(quoteReducer, applyMiddleware(thunk));
 
 ReactDOM.render(
   <Provider store={store}>
