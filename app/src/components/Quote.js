@@ -16,8 +16,7 @@ const clickHandler = (e) => {
 
   return (
     <div className="quote-block">
-      {/* <h2>Quote Component</h2> */}
-      <button onClick={clickHandler}>Hit Me.</button>
+      <button className="hit-btn" onClick={clickHandler}>Hit Me.</button>
       {props.quote ? <h3 className="quote">"{props.quote}"</h3> :null}
       {props.isLoading ? <p className="loading-text">Loading Quote...</p> : null}
       {props.error ? <p className="error-text">{props.error}</p> : null}

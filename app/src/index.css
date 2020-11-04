@@ -12,6 +12,25 @@ code {
     monospace;
 }
 
+.quote-block {
+  width: 80%;
+  margin: auto;
+}
+
 .quote {
   font-size: 4rem;
+}
+
+.hit-btn {
+  background: transparent;
+  border: 8px solid black;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 32.5rem;
+  height: 10rem;
+}
+
+.hit-btn:hover {
+  background: black;
+  color: white;
 }
